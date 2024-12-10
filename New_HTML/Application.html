@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: #b70000;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+           
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Job Application Form</h2>
+    <form action="#" method="post" enctype="multipart/form-data">
+        <!-- Applicant's Name -->
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+        <!-- Email Address -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <!-- Contact Number -->
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your contact number" required>
+
+        <!-- Gender -->
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="Male" required>
+        <label for="male" style="display: inline;">Male</label>
+        <input type="radio" id="female" name="gender" value="Female" required>
+        <label for="female" style="display: inline;">Female</label>
+
+        <!-- Position Applied For -->
+        <label for="position">Position Applied For:</label>
+        <select id="position" name="position" required>
+            <option value="">Select a position</option>
+            <option value="Software Engineer">Software Engineer</option>
+            <option value="Sales Executive">Sales Executive</option>
+            <option value="HR Manager">HR Manager</option>
+            <option value="Data Analyst">Data Analyst</option>
+        </select>
+
+        <!-- Skills -->
+        <label for="skills">Skills (Select multiple):</label>
+        <select id="skills" name="skills[]" multiple>
+            <option value="Java">Java</option>
+            <option value="Python">Python</option>
+            <option value="SQL">SQL</option>
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="JavaScript">JavaScript</option>
+        </select>
+
+        <!-- Availability to Join -->
+        <label>Are you immediately available to join?</label>
+        <input type="checkbox" id="immediate" name="availability" value="Immediate">
+        <label for="immediate" style="display: inline;">Yes</label>
+
+        <!-- Address -->
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="4" placeholder="Enter your address"></textarea>
+
+        <!-- Upload Resume -->
+        <label for="resume">Upload Resume:</label>
+        <input type="file" id="resume" name="resume" accept=".pdf, .doc, .docx" required>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit Application</button>
+
+        <input type="">
+    </form>
+
+</body>
+</html>
